@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 
@@ -29,6 +29,17 @@ const Image2 = styled(Image)`
   transition: opacity 500ms, transform 500ms;
 `;
 
+
+const NewContentDiv = styled.div`
+  position: absolute;
+  width: 100%;
+  background-color: red;
+  overflow: scroll;
+  top: 200vh;
+  left: 0;
+  height: 10vh;
+`;
+
 function App() {
   const ref = useRef<any>(null);
   const [bottom, setBottom] = useState<boolean>(false);
@@ -37,6 +48,7 @@ function App() {
   const [opacity, setOpacity] = useState(0);
   const [scale, setScale] = useState(2.0);
   const [bottomPage, setBottomPage] = useState<boolean>(false);
+
 
   const handleScroll = () => {
     if (ref.current) {
@@ -87,15 +99,25 @@ function App() {
       }
       if (opacity > 0) {
         if (e.deltaY < 0 && scrollTop > 0) {
+          console.log("UP");
           setOpacity(opacity - 0.2);
           setScale(0.2 + scale);
         }
       }
       if (opacity < 1) {
-        if (e.deltaY > 0 && scrollTop + clientHeight === scrollHeight) {
+        if (e.deltaY > 0) {
+          console.log("Dolůůů");
+        }
+        if (
+          e.deltaY > 0 &&
+          scrollTop + clientHeight === scrollHeight &&
+          !bottomPage
+        ) {
+          console.log("down");
           setOpacity(0.2 + opacity);
           setScale(scale - 0.2);
         }
+        setBottomPage(false);
       }
     }
   };
@@ -104,39 +126,34 @@ function App() {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {bottom ? (
-        <Background ref={ref} onScroll={handleScrollTop} onWheel={handleWheel}>
-          <Image
-            src="/images/background/background2.png"
-            alt="image"
-            style={{
-              opacity: transition ? 0 : 1,
-              transform: `scale(${transition ? 1.5 : 1})`,
-            }}
-          />
-          {zommie && (
-            <Image2
-              src="/images/background/background3T.png"
+        <>
+          <Background
+            ref={ref}
+            onScroll={handleScrollTop}
+            onWheel={handleWheel}
+          >
+            <Image
+              src="/images/background/background2.png"
               alt="image"
               style={{
-                opacity,
-                display: opacity < 0.2 ? "none" : "block",
-                transform: `scale(${scale})`,
+                opacity: transition ? 0 : 1,
+                transform: `scale(${transition ? 1.5 : 1})`,
               }}
             />
-          )}
-          {bottomPage && (
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                height: "1500px",
-                backgroundColor: "yellow",
-              }}
-            >
-              Ahoj
-            </div>
-          )}
-        </Background>
+            {zommie && (
+                <Image2
+                  src="/images/background/background3T.png"
+                  alt="image"
+                  style={{
+                    opacity,
+                    display: opacity < 0.2 ? "none" : "block",
+                    transform: `scale(${scale})`,
+                  }}
+                />
+            )}
+          </Background>
+          <NewContentDiv>Hello</NewContentDiv>
+        </>
       ) : (
         <Background ref={ref} onScroll={handleScroll}>
           <Image
