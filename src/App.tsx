@@ -1,4 +1,4 @@
-import React, {useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ const Background = styled.div`
 `;
 
 const Image = styled.img`
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -18,6 +18,14 @@ const Image = styled.img`
   display: block;
   transition: opacity 500ms, transform 500ms;
 `;
+
+// const StyledDiv = styled.div`
+//   position: relative;
+//   width: 100%;
+//   height: 1500px;
+//   display: block;
+//   background-color: red;
+// `;
 
 function App() {
   const ref = useRef<any>(null);
@@ -41,7 +49,6 @@ function App() {
   };
 
   const handleScrollTop = () => {
-
     if (ref.current) {
       // eslint-disable-next-line no-unused-vars
       const { scrollTop, clientHeight, scrollHeight } = ref.current;
@@ -55,7 +62,6 @@ function App() {
           }
         }, 500);
       }
-
     }
   };
 
@@ -63,19 +69,16 @@ function App() {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {bottom ? (
-          <Background
-            ref={ref}
-            onScroll={handleScrollTop}
-          >
-            <Image
-              src="/images/background/background2.png"
-              alt="image"
-              style={{
-                opacity: transition ? 0 : 1,
-                transform: `scale(${transition ? 1.5 : 1})`,
-              }}
-            />
-          </Background>
+        <Background ref={ref} onScroll={handleScrollTop}>
+          <Image
+            src="/images/background/Poust8k.png"
+            alt="image"
+            style={{
+              opacity: transition ? 0 : 1,
+              transform: `scale(${transition ? 1.5 : 1})`,
+            }}
+          />
+        </Background>
       ) : (
         <Background ref={ref} onScroll={handleScroll}>
           <Image
