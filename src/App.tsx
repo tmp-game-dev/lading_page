@@ -71,7 +71,7 @@ function App() {
       {bottom ? (
         <Background ref={ref} onScroll={handleScrollTop}>
           <Image
-            src="/images/background/Poust8k.png"
+            src="/images/background/Poust8k.webp"
             alt="image"
             style={{
               opacity: transition ? 0 : 1,
