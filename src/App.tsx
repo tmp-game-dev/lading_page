@@ -1,23 +1,41 @@
 import React, { useRef, useState } from "react";
 import "./App.css";
 import styled from "styled-components";
+import Navbar from "./components/Navbar";
+import Video from "./components/Video";
 
 const Background = styled.div`
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  background-image: url(/images/background/background.png);
+  background-size: cover;
+  overflow-y: scroll;
+  background-attachment: local;
+  background-repeat: no-repeat;
+`;
+
+const Background2 = styled.div`
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
   position: relative;
+  background-image: url(/images/background/Poust8k.webp);
+  background-size: cover;
+  overflow-y: scroll;
+  background-attachment: local;
+  background-repeat: no-repeat;
 `;
 
-const Image = styled.img`
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: opacity 500ms, transform 500ms;
-`;
+// const Image = styled.img`
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: auto;
+//   display: block;
+//   transition: opacity 500ms, transform 500ms;
+// `;
 
 // const StyledDiv = styled.div`
 //   position: relative;
@@ -69,26 +87,31 @@ function App() {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {bottom ? (
-        <Background ref={ref} onScroll={handleScrollTop}>
-          <Image
-            src="/images/background/Poust8k.webp"
-            alt="image"
-            style={{
-              opacity: transition ? 0 : 1,
-              transform: `scale(${transition ? 1.5 : 1})`,
-            }}
-          />
-        </Background>
+        <Background2
+          ref={ref}
+          onScroll={handleScrollTop}
+          style={{
+            opacity: transition ? 0 : 1,
+            transform: `scale(${transition ? 1.5 : 1})`,
+          }}
+        >
+          <div style={{ height: "400vh" }}>
+            <Navbar />
+          </div>
+        </Background2>
       ) : (
-        <Background ref={ref} onScroll={handleScroll}>
-          <Image
-            src="/images/background/background.png"
-            alt="image"
-            style={{
-              opacity: transition ? 0 : 1,
-              transform: `scale(${transition ? 1.5 : 1})`,
-            }}
-          />
+        <Background
+          ref={ref}
+          onScroll={handleScroll}
+          style={{
+            opacity: transition ? 0 : 1,
+            transform: `scale(${transition ? 1.5 : 1})`,
+          }}
+        >
+          <div style={{ height: "180.5vh" }}>
+            <Navbar />
+            <Video />
+          </div>
         </Background>
       )}
     </>
