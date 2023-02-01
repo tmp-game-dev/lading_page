@@ -3,6 +3,10 @@ import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
+import Islands from "./components/Islands";
+import Boards from "./components/Boards";
+import Gameplay from "./components/Gameplay";
+import RoadMap from "./components/RoadMap";
 
 const Background = styled.div`
   height: 100vh;
@@ -87,32 +91,40 @@ function App() {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {bottom ? (
-        <Background2
-          ref={ref}
-          onScroll={handleScrollTop}
-          style={{
-            opacity: transition ? 0 : 1,
-            transform: `scale(${transition ? 1.5 : 1})`,
-          }}
-        >
-          <div style={{ height: "400vh" }}>
-            <Navbar />
-          </div>
-        </Background2>
+        <div>
+          <Navbar />
+          <Background2
+            ref={ref}
+            onScroll={handleScrollTop}
+            style={{
+              opacity: transition ? 0 : 1,
+              transform: `scale(${transition ? 1.5 : 1})`,
+            }}
+          >
+            <div style={{ height: "400vh" }}>
+              <Boards />
+              <Gameplay/>
+              <RoadMap/>
+            </div>
+          </Background2>
+        </div>
       ) : (
-        <Background
-          ref={ref}
-          onScroll={handleScroll}
-          style={{
-            opacity: transition ? 0 : 1,
-            transform: `scale(${transition ? 1.5 : 1})`,
-          }}
-        >
-          <div style={{ height: "180.5vh" }}>
-            <Navbar />
-            <Video />
-          </div>
-        </Background>
+        <div>
+          <Navbar />
+          <Background
+            ref={ref}
+            onScroll={handleScroll}
+            style={{
+              opacity: transition ? 0 : 1,
+              transform: `scale(${transition ? 1.5 : 1})`,
+            }}
+          >
+            <div style={{ height: "180.5vh" }}>
+              <Video />
+              <Islands />
+            </div>
+          </Background>
+        </div>
       )}
     </>
   );

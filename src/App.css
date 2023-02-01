@@ -4,3 +4,8 @@ body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
 }
+
+@font-face {
+  font-family: "Test";
+  src:local("test"), url(./fonts/font.otf) format("opentype");
+}

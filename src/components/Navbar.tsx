@@ -9,12 +9,14 @@ function Navbar() {
         top: 0,
         display: "flex",
         width: "100%",
-        height: "5.3vh",
+        height: "6.3vh",
+        zIndex: 2,
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: "url(/images/Assets/header.webp)",
+        backgroundImage: "url(/images/Assets/header3.png)",
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "center",
+        backgroundSize: "100% 100%",
       }}
     >
       <div style={{display: "flex",flexDirection: "row", width: "70%",justifyContent: "space-between", color: "white"}}>
