@@ -15,51 +15,69 @@ function RoadMap() {
     <div style={{ marginTop: "25vh", textAlign: "center" }}>
       <StyledSpan>Road Map</StyledSpan>
       <div style={{marginTop: "15vh",height: "125vh",paddingLeft: "0vh"}}>
-        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "relative",right: "25%"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "22%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "19%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "16%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "13%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "10%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "7%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "1%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "2%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "5%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "8%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "11%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "14%",top: "0.3%",transform: "rotate(97deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "17%",top: "2.3%",transform: "rotate(-60deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "18.8%",top: "6.8%",transform: "rotate(-30deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "18.8%",top: "12.8%",transform: "rotate(-0deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "16.9%",top: "19%",transform: "rotate(30deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "13%",top: "23.3%",transform: "rotate(60deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "8%",top: "25.3%",transform: "rotate(-97deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",left: "3%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "2%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "7%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "12%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "relative",right: "20%",top: "25.6%"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "28%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "33%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "38%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "43%",top: "25.6%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "48%",top: "25.9%",transform: "rotate(-97deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "53%",top: "27.9%",transform: "rotate(60deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "57%",top: "31.9%",transform: "rotate(30deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "59%",top: "37.9%",transform: "rotate(0deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "59%",top: "43.9%",transform: "rotate(-30deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "57%",top: "48%",transform: "rotate(-60deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "54%",top: "50%",transform: "rotate(97deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "51%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "relative",right: "49%",top: "50.4%"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "47%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "44%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "41%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "38%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "35%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "32%",top: "50.4%",transform: "rotate(90deg)"}}/>
-        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "relative",right: "29%",top: "50.4%",transform: "rotate(90deg)"}}/>
+        <div style={{height: "125vh",position: "relative"}}> 
+        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "absolute",left: "15%"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "22%",top: "4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "26%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "30%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "34%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "38%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "42%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "46%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "50%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "54%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "58%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "62%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "66%",top:"4%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "70%",top: "4.3%",transform: "rotate(97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "74%",top: "6.3%",transform: "rotate(-60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "77%",top: "10.8%",transform: "rotate(-30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "78%",top: "16.8%",transform: "rotate(-0deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "77%",top: "23%",transform: "rotate(30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "74%",top: "27.5%",transform: "rotate(60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "70%",top: "29.5%",transform: "rotate(-97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "66%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "62%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "58%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "54%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "absolute",left: "47%",top: "26.8%"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "44%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "40%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "36%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "32%",top: "29.8%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "28%",top: "30.2%",transform: "rotate(-97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "24%",top: "32.2%",transform: "rotate(60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "21%",top: "36.7%",transform: "rotate(30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "20%",top: "42.9%",transform: "rotate(0deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "21%",top: "49.1%",transform: "rotate(-30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "24%",top: "53.6%",transform: "rotate(-60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "28%",top: "55.6%",transform: "rotate(97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "32%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "absolute",left: "35%",top: "53.9%"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "42%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "46%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "50%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "54%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "58%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "62%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "66%",top: "55.9%",transform: "rotate(90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "70%",top: "56.2%",transform: "rotate(97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "74%",top: "58.2%",transform: "rotate(-60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "77%",top: "62.7%",transform: "rotate(-30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "78%",top: "68.7%",transform: "rotate(-0deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "77%",top: "74.9%",transform: "rotate(30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "74%",top: "79.4%",transform: "rotate(60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "70%",top: "81.5%",transform: "rotate(-97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "66%",top: "81.8%",transform: "rotate(-90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "62%",top: "81.8%",transform: "rotate(-90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "58%",top: "81.8%",transform: "rotate(-90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "54%",top: "81.8%",transform: "rotate(-90deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "50%",top: "82.2%",transform: "rotate(-97deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "46%",top: "84.2%",transform: "rotate(60deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "43%",top: "88.7%",transform: "rotate(30deg)"}}/>
+        <img src="/images/Assets/Cesta.png" alt="cesta" style={{width: "1%",height: "5%",position: "absolute",left: "42%",top: "94.7%",transform: "rotate(0deg)"}}/>
+        <img src="/images/Assets/kaktus.png" alt="kaktus" style={{width: "5%",height: "10%",position: "absolute",left: "40%",top: "100%"}}/>
+        </div>
       </div>
     </div>
   );
