@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
@@ -7,6 +7,7 @@ import Islands from "./components/Islands";
 import Boards from "./components/Boards";
 import Gameplay from "./components/Gameplay";
 import RoadMap from "./components/RoadMap";
+import Footer from "./components/Footer";
 
 const Background = styled.div`
   height: 100vh;
@@ -31,41 +32,27 @@ const Background2 = styled.div`
   background-repeat: no-repeat;
 `;
 
-// const Image = styled.img`
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: auto;
-//   display: block;
-//   transition: opacity 500ms, transform 500ms;
-// `;
-
-// const StyledDiv = styled.div`
-//   position: relative;
-//   width: 100%;
-//   height: 1500px;
-//   display: block;
-//   background-color: red;
-// `;
-
 function App() {
   const ref = useRef<any>(null);
   const [bottom, setBottom] = useState<boolean>(false);
-  const [transition, setTransition] = useState<boolean>(false);
+  const [isAnimating, setIsAnimating] = React.useState(false);
+  
+  useEffect(() => {
+    const preloadedImage = new Image();
+    preloadedImage.src = "/images/background/Poust8k.webp";
+  }, []);
+
 
   const handleScroll = () => {
     if (ref.current) {
       const { scrollTop, clientHeight, scrollHeight } = ref.current;
       if (scrollTop + clientHeight === scrollHeight) {
-        setTransition(true);
         setTimeout(() => {
           setBottom(true);
-          setTransition(false);
           if (ref.current !== null) {
             ref.current.scrollTo(0, 20);
           }
-        }, 500);
+        }, 20);
       }
     }
   };
@@ -75,14 +62,16 @@ function App() {
       // eslint-disable-next-line no-unused-vars
       const { scrollTop, clientHeight, scrollHeight } = ref.current;
       if (scrollTop === 0) {
-        setTransition(true);
         setTimeout(() => {
           setBottom(false);
-          setTransition(false);
           if (ref.current !== null) {
-            ref.current.scrollTo(0, clientHeight - 150);
+            ref.current.scrollTo(0, clientHeight + 150);
           }
-        }, 500);
+        }, 20);
+      }
+
+      if (scrollTop > 1640) {
+        setIsAnimating(true)
       }
     }
   };
@@ -96,15 +85,14 @@ function App() {
           <Background2
             ref={ref}
             onScroll={handleScrollTop}
-            style={{
-              opacity: transition ? 0 : 1,
-              transform: `scale(${transition ? 1.5 : 1})`,
-            }}
           >
             <div style={{ height: "400vh" }}>
               <Boards />
-              <Gameplay/>
-              <RoadMap/>
+              <Gameplay />
+              <RoadMap
+                isAnimating={isAnimating}
+              />
+              <Footer />
             </div>
           </Background2>
         </div>
@@ -114,10 +102,6 @@ function App() {
           <Background
             ref={ref}
             onScroll={handleScroll}
-            style={{
-              opacity: transition ? 0 : 1,
-              transform: `scale(${transition ? 1.5 : 1})`,
-            }}
           >
             <div style={{ height: "180.5vh" }}>
               <Video />

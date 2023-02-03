@@ -16,16 +16,16 @@ function Boards() {
       <StyledSpan>Play and Earn</StyledSpan>
         <div
           style={{
-            width: "100%",
+            width: "30%",
             justifyContent: "center",
             position: "relative",
-            right: "20%",
+            left: "15%",
             transform: "rotate(-10deg)",
             alignItems: "center",
             height: "45vh",
             display: "flex",
             backgroundImage: "url(/images/Assets/Tabule.png)",
-            backgroundSize: "30% 100%",
+            backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "center",
             marginTop: "20vh",
@@ -33,16 +33,16 @@ function Boards() {
         />
       <div
         style={{
-          width: "100%",
+          width: "30%",
           justifyContent: "center",
           position: "relative",
-          left: "20%",
+          left: "55%",
           transform: "rotate(10deg)",
           alignItems: "center",
           height: "45vh",
           display: "flex",
           backgroundImage: "url(/images/Assets/Tabule.png)",
-          backgroundSize: "30% 100%",
+          backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           backgroundPositionX: "center",
         }}

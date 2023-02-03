@@ -1,4 +1,3 @@
-Načítat obrázek č2 při loadu první stránky, aby byl plynulej přechod
 
 Personalizace -> Přihlášení penezenkou scan jeho NFT a zobrazení jeho postaviček na stránce místo zaákladních pokemonu.
 
@@ -6,9 +5,11 @@ Naházet příšerky skrze celou stránku
 
 Na tabule nakreslit křídou..
 
-RoadMapa
+Background2 to Background se nevrací dolů ale nahoru
 
-Při najetí na ostrov vyskočí info okno
+Kod upravit aby byl čitelnej
 
+Při prvním načtení strányk nechat načítat Video
 
-Animace roadmapy se pustí az po určitém najetí do té sekce tj prostě scroll trigger
+Header
+Footer
