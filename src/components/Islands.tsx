@@ -15,6 +15,56 @@ const BubbleText = styled(StyledSpan)`
   font-size: 2vh;
 `;
 
+const IslandWrapper = styled.div`
+  text-align: center;
+  padding-top: 10%;
+`;
+
+const IslandContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+`;
+
+const Island = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const LeftIsland = styled.div`
+  background-color: rgba(0, 92, 24, 0.4);
+  position: absolute;
+  padding: 5vh;
+  top: -60%;
+  width: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15%;
+`;
+
+const MiddleIsland = styled(LeftIsland)`
+  background-color: rgba(191, 10, 10, 0.5);
+  top: -40%;
+`;
+
+const RightIsland = styled(LeftIsland)`
+  background-color: rgba(209, 180, 33, 0.5);
+`;
+
+const IslandImage = styled.img`
+  width: 70%;
+`;
+
+const IslandImageTranslated = styled(IslandImage)`
+  transform: translateY(10vh);
+`;
+
 function Islands() {
   const island1Ref = useRef(null);
   const island2Ref = useRef(null);
@@ -67,131 +117,62 @@ function Islands() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", paddingTop: "10%" }}>
+    <IslandWrapper style={{ textAlign: "center", paddingTop: "10%" }}>
       <StyledSpan>Guilds</StyledSpan>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          paddingTop: "5%",
-        }}
-      >
-        <div
-          ref={island1Ref}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+      <IslandContainer>
+        <Island ref={island1Ref}>
           {isImage1Hover && (
-            <div
-              style={{
-                backgroundColor: "rgba(0, 92, 24, 0.4)",
-                position: "absolute",
-                padding: "5vh",
-                top: "-60%",
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
-              }}
-            >
+            <LeftIsland>
               <BubbleText>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </LeftIsland>
           )}
-          <img
+          <IslandImage
             onMouseOver={handleMouseOverImage1}
             onMouseOut={handleMouseOutImage1}
             src="/images/Assets/island1.png"
             alt="Island"
-            style={{ width: "70%" }}
           />
-        </div>
-        <div
-          ref={island2Ref}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        </Island>
+        <Island ref={island2Ref}>
           {isImage2Hover && (
-            <div
-              style={{
-                backgroundColor: "rgba(191, 10, 10, 0.5)",
-                position: "absolute",
-                padding: "5vh",
-                top: "-40%",
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
-              }}
-            >
+            <MiddleIsland>
               <BubbleText>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </MiddleIsland>
           )}
-          <img
+          <IslandImageTranslated
             onMouseOver={handleMouseOverImage2}
             onMouseOut={handleMouseOutImage2}
             src="/images/Assets/island2.png"
             alt="Island"
-            style={{ width: "70%", transform: "translateY(10vh)" }}
           />
-        </div>
-        <div
-          ref={island3Ref}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        </Island>
+        <Island ref={island3Ref}>
           {isImage3Hover && (
-            <div
-              style={{
-                backgroundColor: "rgba(209, 180, 33, 0.5)",
-                position: "absolute",
-                padding: "5vh",
-                top: "-60%",
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
-              }}
-            >
+            <RightIsland>
               <BubbleText>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </RightIsland>
           )}
-          <img
+          <IslandImage
             onMouseOver={handleMouseOverImage3}
             onMouseOut={handleMouseOutImage3}
             src="/images/Assets/island3.png"
             alt="Island"
-            style={{ width: "70%" }}
           />
-        </div>
-      </div>
-    </div>
+        </Island>
+      </IslandContainer>
+    </IslandWrapper>
   );
 }
 

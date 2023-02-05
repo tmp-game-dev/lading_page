@@ -16,8 +16,43 @@ const BubbleText = styled(StyledSpan)`
   font-size: 2vh;
 `;
 
-function RoadMap(props: {isAnimating: boolean}) {
-  const { isAnimating} = props;
+const RoadMapWrapper = styled.div`
+  margin-top: 25vh;
+  text-align: center;
+`;
+
+const RoadMapContainer = styled.div`
+  margin-top: 15vh;
+  height: 125vh;
+  padding-left: 0vh;
+`;
+
+const RoadMapImagesContainer = styled.div`
+  height: 125vh;
+  position: relative;
+`;
+
+const PopUpBubble = styled.div`
+  background-color: rgba(217, 157, 106, 0.5);
+  position: absolute;
+  padding: 5vh;
+  top: -2%;
+  left: 30%;
+  z-index: 3;
+  width: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15%;
+`;
+
+function RoadMap(props: { isAnimating: boolean }) {
+  const { isAnimating } = props;
   const imageRefs: any = [];
   const [isImage1Hover, setIsImage1Hover] = React.useState(false);
   const [isImage2Hover, setIsImage2Hover] = React.useState(false);
@@ -56,117 +91,57 @@ function RoadMap(props: {isAnimating: boolean}) {
     setIsImage4Hover(false);
   };
 
+  const animateImage = (imageRef: any, index: any) => {
+    gsap.to(imageRef, { opacity: 1, duration: 1, delay: index * 0.1 });
+  };
+
   React.useEffect(() => {
     if (isAnimating) {
-      gsap.to(imageRefs[0], { opacity: 1, duration: 1, delay: 0 });
-      gsap.to(imageRefs[1], { opacity: 1, duration: 1, delay: 0.1 });
-      gsap.to(imageRefs[2], { opacity: 1, duration: 1, delay: 0.2 });
-      gsap.to(imageRefs[3], { opacity: 1, duration: 1, delay: 0.3 });
-      gsap.to(imageRefs[4], { opacity: 1, duration: 1, delay: 0.4 });
-      gsap.to(imageRefs[5], { opacity: 1, duration: 1, delay: 0.5 });
-      gsap.to(imageRefs[6], { opacity: 1, duration: 1, delay: 0.6 });
-      gsap.to(imageRefs[7], { opacity: 1, duration: 1, delay: 0.7 });
-      gsap.to(imageRefs[8], { opacity: 1, duration: 1, delay: 0.8 });
-      gsap.to(imageRefs[9], { opacity: 1, duration: 1, delay: 0.9 });
-      gsap.to(imageRefs[10], { opacity: 1, duration: 1, delay: 1 });
-      gsap.to(imageRefs[11], { opacity: 1, duration: 1, delay: 1.1 });
-      gsap.to(imageRefs[12], { opacity: 1, duration: 1, delay: 1.2 });
-      gsap.to(imageRefs[13], { opacity: 1, duration: 1, delay: 1.3 });
-      gsap.to(imageRefs[14], { opacity: 1, duration: 1, delay: 1.4 });
-      gsap.to(imageRefs[15], { opacity: 1, duration: 1, delay: 1.5 });
-      gsap.to(imageRefs[16], { opacity: 1, duration: 1, delay: 1.6 });
-      gsap.to(imageRefs[17], { opacity: 1, duration: 1, delay: 1.7 });
-      gsap.to(imageRefs[18], { opacity: 1, duration: 1, delay: 1.8 });
-      gsap.to(imageRefs[19], { opacity: 1, duration: 1, delay: 1.9 });
-      gsap.to(imageRefs[20], { opacity: 1, duration: 1, delay: 2 });
-      gsap.to(imageRefs[21], { opacity: 1, duration: 1, delay: 2.1 });
-      gsap.to(imageRefs[22], { opacity: 1, duration: 1, delay: 2.2 });
-      gsap.to(imageRefs[23], { opacity: 1, duration: 1, delay: 2.3 });
-      gsap.to(imageRefs[24], { opacity: 1, duration: 1, delay: 2.4 });
-      gsap.to(imageRefs[25], { opacity: 1, duration: 1, delay: 2.5 });
-      gsap.to(imageRefs[26], { opacity: 1, duration: 1, delay: 2.6 });
-      gsap.to(imageRefs[27], { opacity: 1, duration: 1, delay: 2.7 });
-      gsap.to(imageRefs[28], { opacity: 1, duration: 1, delay: 2.8 });
-      gsap.to(imageRefs[29], { opacity: 1, duration: 1, delay: 2.9 });
-      gsap.to(imageRefs[30], { opacity: 1, duration: 1, delay: 3 });
-      gsap.to(imageRefs[31], { opacity: 1, duration: 1, delay: 3.1 });
-      gsap.to(imageRefs[32], { opacity: 1, duration: 1, delay: 3.2 });
-      gsap.to(imageRefs[33], { opacity: 1, duration: 1, delay: 3.3 });
-      gsap.to(imageRefs[34], { opacity: 1, duration: 1, delay: 3.4 });
-      gsap.to(imageRefs[35], { opacity: 1, duration: 1, delay: 3.5 });
-      gsap.to(imageRefs[36], { opacity: 1, duration: 1, delay: 3.6 });
-      gsap.to(imageRefs[37], { opacity: 1, duration: 1, delay: 3.7 });
-      gsap.to(imageRefs[38], { opacity: 1, duration: 1, delay: 3.8 });
-      gsap.to(imageRefs[39], { opacity: 1, duration: 1, delay: 3.9 });
-      gsap.to(imageRefs[40], { opacity: 1, duration: 1, delay: 4 });
-      gsap.to(imageRefs[41], { opacity: 1, duration: 1, delay: 4.1 });
-      gsap.to(imageRefs[42], { opacity: 1, duration: 1, delay: 4.2 });
-      gsap.to(imageRefs[43], { opacity: 1, duration: 1, delay: 4.3 });
-      gsap.to(imageRefs[44], { opacity: 1, duration: 1, delay: 4.4 });
-      gsap.to(imageRefs[45], { opacity: 1, duration: 1, delay: 4.5 });
-      gsap.to(imageRefs[46], { opacity: 1, duration: 1, delay: 4.6 });
-      gsap.to(imageRefs[47], { opacity: 1, duration: 1, delay: 4.7 });
-      gsap.to(imageRefs[48], { opacity: 1, duration: 1, delay: 4.8 });
-      gsap.to(imageRefs[49], { opacity: 1, duration: 1, delay: 4.9 });
-      gsap.to(imageRefs[50], { opacity: 1, duration: 1, delay: 5 });
-      gsap.to(imageRefs[51], { opacity: 1, duration: 1, delay: 5.1 });
-      gsap.to(imageRefs[52], { opacity: 1, duration: 1, delay: 5.2 });
-      gsap.to(imageRefs[53], { opacity: 1, duration: 1, delay: 5.3 });
-      gsap.to(imageRefs[54], { opacity: 1, duration: 1, delay: 5.4 });
-      gsap.to(imageRefs[55], { opacity: 1, duration: 1, delay: 5.5 });
-      gsap.to(imageRefs[56], { opacity: 1, duration: 1, delay: 5.6 });
-      gsap.to(imageRefs[57], { opacity: 1, duration: 1, delay: 5.7 });
-      gsap.to(imageRefs[58], { opacity: 1, duration: 1, delay: 5.8 });
-      gsap.to(imageRefs[59], { opacity: 1, duration: 1, delay: 5.9 });
+      imageRefs.forEach(animateImage);
     }
-  }, [isAnimating, imageRefs]);
+  }, [isAnimating]);
   return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <div style={{ marginTop: "25vh", textAlign: "center" }}>
+    <RoadMapWrapper>
       <StyledSpan>Road Map</StyledSpan>
-      <div style={{ marginTop: "15vh", height: "125vh", paddingLeft: "0vh" }}>
-        <div style={{ height: "125vh", position: "relative" }}>
-          <img
-            ref={(ref) => (imageRefs[0] = ref)}
-            onMouseOver={handleMouseOverImage1}
-            onMouseOut={handleMouseOutImage1}
-            src="/images/Assets/cedule.png"
-            alt="kaktus"
-            style={{
-              width: "5%",
-              height: "10%",
-              position: "absolute",
-              left: "15%",
-              opacity: 0,
-            }}
-          />
-          {isImage1Hover && (
-            <div
+      <RoadMapContainer>
+        <RoadMapImagesContainer
+          style={{ height: "125vh", position: "relative" }}
+        >
+          <>
+            <img
+              ref={(ref) => (imageRefs[0] = ref)}
+              onMouseOver={handleMouseOverImage1}
+              onMouseOut={handleMouseOutImage1}
+              src="/images/Assets/cedule.png"
+              alt="kaktus"
               style={{
-                backgroundColor: "rgba(217, 157, 106, 0.5)",
+                width: "5%",
+                height: "10%",
                 position: "absolute",
-                padding: "5vh",
-                top: "-2%",
-                left: "30%",
-                zIndex: 3,
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
+                left: "15%",
+                opacity: 0,
               }}
-            >
+            />
+            <img
+              ref={(ref) => (imageRefs[60] = ref)}
+              style={{
+                position: "absolute",
+                left: "16.6%",
+                top: "12%",
+                opacity: 0,
+              }}
+              src="/images/Assets/info4.png"
+              alt="info"
+            />
+          </>
+          {isImage1Hover && (
+            <PopUpBubble>
               <BubbleText>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </PopUpBubble>
           )}
           <img
             ref={(ref) => (imageRefs[1] = ref)}
@@ -490,48 +465,42 @@ function RoadMap(props: {isAnimating: boolean}) {
               opacity: 0,
             }}
           />
-          <img
-            ref={(ref) => (imageRefs[24] = ref)}
-            src="/images/Assets/kaktus.png"
-            onMouseOver={handleMouseOverImage2}
-            onMouseOut={handleMouseOutImage2}
-            alt="kaktus"
-            style={{
-              width: "5%",
-              height: "10%",
-              position: "absolute",
-              left: "47%",
-              top: "26.8%",
-              opacity: 0,
-            }}
-          />
-          {isImage2Hover && (
-            <div
+          <div>
+            <img
+              ref={(ref) => (imageRefs[24] = ref)}
+              src="/images/Assets/kaktus.png"
+              onMouseOver={handleMouseOverImage2}
+              onMouseOut={handleMouseOutImage2}
+              alt="kaktus"
               style={{
-                backgroundColor: "rgba(217, 157, 106, 0.5)",
+                width: "5%",
+                height: "10%",
                 position: "absolute",
-                padding: "5vh",
-                top: "23%",
-                left: "55%",
-                zIndex: 3,
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
+                left: "47%",
+                top: "26.8%",
+                opacity: 0,
               }}
-            >
+            />
+            <img
+              ref={(ref) => (imageRefs[61] = ref)}
+              style={{
+                position: "absolute",
+                left: "48.7%",
+                top: "39%",
+                opacity: 0,
+              }}
+              src="/images/Assets/info4.png"
+              alt="info"
+            />
+          </div>
+          {isImage2Hover && (
+            <PopUpBubble style={{ top: "23%", left: "55%" }}>
               <BubbleText>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </PopUpBubble>
           )}
           <img
             ref={(ref) => (imageRefs[25] = ref)}
@@ -701,40 +670,39 @@ function RoadMap(props: {isAnimating: boolean}) {
               opacity: 0,
             }}
           />
-          <img
-            ref={(ref) => (imageRefs[37] = ref)}
-            onMouseOver={handleMouseOverImage3}
-            onMouseOut={handleMouseOutImage3}
-            src="/images/Assets/buffalo.png"
-            alt="kaktus"
-            style={{
-              width: "7%",
-              height: "10%",
-              position: "absolute",
-              left: "34.5%",
-              top: "53.3%",
-              opacity: 0,
-            }}
-          />
-          {isImage3Hover && (
-            <div
+          <div>
+            <img
+              ref={(ref) => (imageRefs[37] = ref)}
+              onMouseOver={handleMouseOverImage3}
+              onMouseOut={handleMouseOutImage3}
+              src="/images/Assets/buffalo.png"
+              alt="kaktus"
               style={{
-                backgroundColor: "rgba(217, 157, 106, 0.5)",
+                width: "7%",
+                height: "10%",
                 position: "absolute",
-                padding: "5vh",
+                left: "34.5%",
+                top: "53.3%",
+                opacity: 0,
+              }}
+            />
+            <img
+              ref={(ref) => (imageRefs[62] = ref)}
+              style={{
+                position: "absolute",
+                left: "37.2%",
+                top: "65%",
+                opacity: 0,
+              }}
+              src="/images/Assets/info4.png"
+              alt="info"
+            />
+          </div>
+          {isImage3Hover && (
+            <PopUpBubble
+              style={{
                 top: "50%",
                 left: "45%",
-                zIndex: 3,
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
               }}
             >
               <BubbleText>
@@ -742,7 +710,7 @@ function RoadMap(props: {isAnimating: boolean}) {
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </PopUpBubble>
           )}
           <img
             ref={(ref) => (imageRefs[38] = ref)}
@@ -1038,40 +1006,39 @@ function RoadMap(props: {isAnimating: boolean}) {
               opacity: 0,
             }}
           />
-          <img
-            ref={(ref) => (imageRefs[59] = ref)}
-            onMouseOver={handleMouseOverImage4}
-            onMouseOut={handleMouseOutImage4}
-            src="/images/Assets/poklad.png"
-            alt="kaktus"
-            style={{
-              width: "7%",
-              height: "10%",
-              position: "absolute",
-              left: "43%",
-              top: "100%",
-              opacity: 0,
-            }}
-          />
-          {isImage4Hover && (
-            <div
+          <div>
+            <img
+              ref={(ref) => (imageRefs[59] = ref)}
+              onMouseOver={handleMouseOverImage4}
+              onMouseOut={handleMouseOutImage4}
+              src="/images/Assets/poklad.png"
+              alt="kaktus"
               style={{
-                backgroundColor: "rgba(217, 157, 106, 0.5)",
+                width: "7%",
+                height: "10%",
                 position: "absolute",
-                padding: "5vh",
+                left: "43%",
+                top: "100%",
+                opacity: 0,
+              }}
+            />
+            <img
+              ref={(ref) => (imageRefs[63] = ref)}
+              style={{
+                position: "absolute",
+                left: "46%",
+                top: "113%",
+                opacity: 0,
+              }}
+              src="/images/Assets/info4.png"
+              alt="info"
+            />
+          </div>
+          {isImage4Hover && (
+            <PopUpBubble
+              style={{
                 top: "80%",
                 left: "37%",
-                zIndex: 3,
-                width: "30vh",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "white",
-                boxShadow: "0px 0px 20px 10px rgba(0, 0, 0, 0.7)",
-                borderRadius: "15%",
               }}
             >
               <BubbleText>
@@ -1079,11 +1046,11 @@ function RoadMap(props: {isAnimating: boolean}) {
                 industry. Lorem Ipsum has been the standard dummy text ever
                 since the 1500s, when an unknown printer
               </BubbleText>
-            </div>
+            </PopUpBubble>
           )}
-        </div>
-      </div>
-    </div>
+        </RoadMapImagesContainer>
+      </RoadMapContainer>
+    </RoadMapWrapper>
   );
 }
 

@@ -9,45 +9,74 @@ const StyledSpan = styled.span`
     0 0 15px rgb(61, 33, 14);
 `;
 
+const BoardText = styled(StyledSpan)`
+  font-size: 2vh;
+`;
+
+const Container = styled.div`
+  margin-top: 25vh;
+  text-align: center;
+`;
+
+const BoardContainerLeft = styled.div`
+  width: 30%;
+  justify-content: center;
+  position: relative;
+  left: 15%;
+  transform: rotate(-10deg);
+  align-items: center;
+  height: 45vh;
+  display: flex;
+  background-image: url(/images/Assets/Tabule.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin-top: 20vh;
+`;
+
+const BoardContainerRight = styled(BoardContainerLeft)`
+  left: 55%;
+  transform: rotate(10deg);
+  margin-top: 0vh;
+`;
+
+const InsideBoardContainer = styled.div`
+  margin: 5vh;
+`;
+
 function Boards() {
   return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <div style={{ marginTop: "25vh", textAlign: "center" }}>
+    <Container>
       <StyledSpan>Play and Earn</StyledSpan>
-        <div
-          style={{
-            width: "30%",
-            justifyContent: "center",
-            position: "relative",
-            left: "15%",
-            transform: "rotate(-10deg)",
-            alignItems: "center",
-            height: "45vh",
-            display: "flex",
-            backgroundImage: "url(/images/Assets/Tabule.png)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPositionX: "center",
-            marginTop: "20vh",
-          }}
-        />
-      <div
-        style={{
-          width: "30%",
-          justifyContent: "center",
-          position: "relative",
-          left: "55%",
-          transform: "rotate(10deg)",
-          alignItems: "center",
-          height: "45vh",
-          display: "flex",
-          backgroundImage: "url(/images/Assets/Tabule.png)",
-          backgroundSize: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundPositionX: "center",
-        }}
-      />
-    </div>
+      <BoardContainerLeft>
+        <InsideBoardContainer>
+          <BoardText>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the standard dummy text ever since
+            the 1500s, when an unknown printer Lorem Ipsum is simply dummy text
+            of the printing and typesetting industry. Lorem Ipsum has been the
+            standard dummy text ever since the 1500s, when an unknown printer
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the standard dummy text ever since
+            the 1500s, when an unknown printer
+          </BoardText>
+        </InsideBoardContainer>
+      </BoardContainerLeft>
+      <BoardContainerRight>
+        <InsideBoardContainer>
+          <BoardText>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the standard dummy text ever since
+            the 1500s, when an unknown printer Lorem Ipsum is simply dummy text
+            of the printing and typesetting industry. Lorem Ipsum has been the
+            standard dummy text ever since the 1500s, when an unknown printer
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the standard dummy text ever since
+            the 1500s, when an unknown printer
+          </BoardText>
+        </InsideBoardContainer>
+      </BoardContainerRight>
+    </Container>
   );
 }
 

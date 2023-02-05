@@ -1,4 +1,4 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
@@ -20,6 +20,10 @@ const Background = styled.div`
   background-repeat: no-repeat;
 `;
 
+const BackgroundContainer = styled.div`
+  height: 180.5vh;
+`;
+
 const Background2 = styled.div`
   width: 100%;
   height: 100vh;
@@ -32,16 +36,29 @@ const Background2 = styled.div`
   background-repeat: no-repeat;
 `;
 
+const BackgroundContainer2 = styled.div`
+  height: 400vh;
+`;
+
 function App() {
   const ref = useRef<any>(null);
   const [bottom, setBottom] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = React.useState(false);
-  
+  const [fromBackground2, setFromBackground2] = useState<boolean>(false);
+
   useEffect(() => {
     const preloadedImage = new Image();
     preloadedImage.src = "/images/background/Poust8k.webp";
   }, []);
 
+  useEffect(() => {
+    if (ref.current && fromBackground2) {
+      if (!bottom) {
+        ref.current.scrollTo(0, ref.current.clientHeight - 150);
+        setFromBackground2(false);
+      }
+    }
+  }, [bottom, fromBackground2]);
 
   const handleScroll = () => {
     if (ref.current) {
@@ -64,14 +81,12 @@ function App() {
       if (scrollTop === 0) {
         setTimeout(() => {
           setBottom(false);
-          if (ref.current !== null) {
-            ref.current.scrollTo(0, clientHeight + 150);
-          }
+          setFromBackground2(true);
         }, 20);
       }
 
       if (scrollTop > 1640) {
-        setIsAnimating(true)
+        setIsAnimating(true);
       }
     }
   };
@@ -80,35 +95,27 @@ function App() {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {bottom ? (
-        <div>
+        <>
           <Navbar />
-          <Background2
-            ref={ref}
-            onScroll={handleScrollTop}
-          >
-            <div style={{ height: "400vh" }}>
+          <Background2 ref={ref} onScroll={handleScrollTop}>
+            <BackgroundContainer2>
               <Boards />
               <Gameplay />
-              <RoadMap
-                isAnimating={isAnimating}
-              />
+              <RoadMap isAnimating={isAnimating} />
               <Footer />
-            </div>
+            </BackgroundContainer2>
           </Background2>
-        </div>
+        </>
       ) : (
-        <div>
+        <>
           <Navbar />
-          <Background
-            ref={ref}
-            onScroll={handleScroll}
-          >
-            <div style={{ height: "180.5vh" }}>
+          <Background ref={ref} onScroll={handleScroll}>
+            <BackgroundContainer>
               <Video />
               <Islands />
-            </div>
+            </BackgroundContainer>
           </Background>
-        </div>
+        </>
       )}
     </>
   );
