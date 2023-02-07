@@ -9,3 +9,8 @@ body {
   font-family: "Test";
   src:local("test"), url(./fonts/font.otf) format("opentype");
 }
+
+@font-face {
+  font-family: "Jolly";
+  src: local("jolly"), url(./fonts/JollyLodger-Regular.ttf) format("truetype");
+}

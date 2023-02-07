@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
@@ -8,6 +9,7 @@ import Boards from "./components/Boards";
 import Gameplay from "./components/Gameplay";
 import RoadMap from "./components/RoadMap";
 import Footer from "./components/Footer";
+import { State } from "./redux";
 
 const Background = styled.div`
   height: 100vh;
@@ -45,7 +47,7 @@ function App() {
   const [bottom, setBottom] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = React.useState(false);
   const [fromBackground2, setFromBackground2] = useState<boolean>(false);
-
+  const data = useSelector((state: State) => state.data);
   useEffect(() => {
     const preloadedImage = new Image();
     preloadedImage.src = "/images/background/Poust8k.webp";
@@ -99,12 +101,12 @@ function App() {
           <Navbar />
           <Background2 ref={ref} onScroll={handleScrollTop}>
             <BackgroundContainer2>
-            <img style={{position: "absolute",width: "15%",left: "70%",top: "75%"}} src="/images/Assets/Drake2.png" alt="Dragon"/>
-            <img style={{position: "absolute",width: "15%",left: "20%",top: "15%"}} src="/images/Assets/Drake2.png" alt="Dragon"/>
+            <img style={{position: "absolute",width: "15%",left: "70%",top: "75%"}} src={data.imageTokens[3]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
+            <img style={{position: "absolute",width: "15%",left: "20%",top: "15%"}} src={data.imageTokens[4]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
               <Boards />
               <Gameplay />
-              <img style={{position: "absolute",width: "8%",left: "70%",top: "255%"}} src="/images/Assets/animal.png" alt="Animal"/>
-              <img style={{position: "absolute",width: "8%",left: "20%",top: "365%"}} src="/images/Assets/animal.png" alt="Animal"/>
+              <img style={{position: "absolute",width: "8%",left: "70%",top: "255%"}} src={data.imageTokens[5]!== undefined ? data.imageTokens[0] : "/images/Assets/animal.png"} alt="Animal"/>
+              <img style={{position: "absolute",width: "8%",left: "20%",top: "365%"}} src={data.imageTokens[6]!== undefined ? data.imageTokens[0] : "/images/Assets/animal.png"} alt="Animal"/>
               <RoadMap isAnimating={isAnimating} />
               <Footer />
             </BackgroundContainer2>
@@ -115,9 +117,9 @@ function App() {
           <Navbar />
           <Background ref={ref} onScroll={handleScroll}>
             <BackgroundContainer>
-              <img style={{position: "absolute",width: "9%",left: "15%",top: "70%"}} src="/images/Assets/Drake.png" alt="Dragon"/>
-              <img style={{position: "absolute",width: "9%",left: "80%"}} src="/images/Assets/Drake.png" alt="Dragon"/>
-              <img style={{position: "absolute",width: "15%",left: "50%",top: "130%"}} src="/images/Assets/Drake2.png" alt="Dragon"/>
+              <img style={{position: "absolute",width: "9%",left: "15%",top: "70%"}} src={data.imageTokens[0]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake.png"} alt="Dragon"/>
+              <img style={{position: "absolute",width: "9%",left: "80%"}} src={data.imageTokens[1]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake.png"} alt="Dragon"/>
+              <img style={{position: "absolute",width: "15%",left: "50%",top: "130%"}} src={data.imageTokens[2]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
               <Video />
               <Islands />
             </BackgroundContainer>

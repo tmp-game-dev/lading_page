@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { connect } from "../redux/blockchain/action-creators";
+import { State } from "../redux";
+import { textShortener } from '../utils/strings'
+
+
 
 const StyledSpan = styled.span`
   font-size: 7vh;
@@ -11,6 +17,11 @@ const StyledSpan = styled.span`
 
 const BoardText = styled(StyledSpan)`
   font-size: 2vh;
+`;
+
+const AccountText = styled(StyledSpan)`
+  font-family: jolly;
+  font-size: 2.5vh;
 `;
 
 const Button = styled.button`
@@ -67,9 +78,20 @@ const ButtonStyledContainer = styled.div`
   gap: 1vh;
 `;
 
+
 const ButtonIcon = styled.img``;
 
 function Navbar() {
+  const dispatch = useDispatch();
+  const blockchain = useSelector((state: State) => state.blockchain);
+
+  const handleConnectWallet = () => {
+    dispatch(connect());
+  };
+
+
+
+
   return (
     <Header>
       <Container>
@@ -84,10 +106,10 @@ function Navbar() {
           <BoardText>Zalozka</BoardText>
         </ItemsContainer>
         <ActionContainer>
-          <Button>
+          <Button onClick={handleConnectWallet}>
             <ButtonStyledContainer>
               <ButtonIcon src="/images/Assets/metamask.png" alt="Metamask" />
-              <BoardText>Connect Metamask</BoardText>
+              <AccountText>{blockchain.account!= null ? textShortener({ charsStart: 6, charsEnd: 10 })(blockchain.account): "Connect Metamask"}</AccountText>
             </ButtonStyledContainer>
           </Button>
         </ActionContainer>
