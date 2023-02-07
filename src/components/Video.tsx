@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+interface VideoProps {
+  title: string;
+  src: string;
+}
+
 const StyledSpan = styled.span`
   font-size: 7vh;
   font-family: test;
@@ -42,16 +47,16 @@ const StyledIframe = styled.iframe`
   border-radius: 25px;
 `;
 
-function Video() {
+function Video({title,src}: VideoProps) {
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <VideoWrapper>
-      <StyledSpan>Developers info</StyledSpan>
+      <StyledSpan>{title}</StyledSpan>
       <VideoBorder>
         <VideoContainer>
           <StyledIframe
             title="Video"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src={src}
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

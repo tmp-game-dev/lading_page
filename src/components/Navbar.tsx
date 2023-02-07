@@ -20,8 +20,7 @@ const BoardText = styled(StyledSpan)`
 `;
 
 const AccountText = styled(StyledSpan)`
-  font-family: jolly;
-  font-size: 2.5vh;
+  font-size: 2vh;
 `;
 
 const Button = styled.button`
@@ -99,11 +98,11 @@ function Navbar() {
           <BoardText>Tady bude logo</BoardText>
         </LogoContainer>
         <ItemsContainer>
-          <BoardText>Zalozka</BoardText>
-          <BoardText>Zalozka</BoardText>
-          <BoardText>Zalozka</BoardText>
-          <BoardText>Zalozka</BoardText>
-          <BoardText>Zalozka</BoardText>
+          <BoardText>Guilds</BoardText>
+          <BoardText>RoadMap</BoardText>
+          <BoardText>GamePlay</BoardText>
+          <BoardText>WhitePaper</BoardText>
+          <BoardText>Minting</BoardText>
         </ItemsContainer>
         <ActionContainer>
           <Button onClick={handleConnectWallet}>

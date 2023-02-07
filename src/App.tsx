@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Video from "./components/Video";
 import Islands from "./components/Islands";
 import Boards from "./components/Boards";
-import Gameplay from "./components/Gameplay";
 import RoadMap from "./components/RoadMap";
 import Footer from "./components/Footer";
 import { State } from "./redux";
@@ -104,7 +103,7 @@ function App() {
             <img style={{position: "absolute",width: "15%",left: "70%",top: "75%"}} src={data.imageTokens[3]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
             <img style={{position: "absolute",width: "15%",left: "20%",top: "15%"}} src={data.imageTokens[4]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
               <Boards />
-              <Gameplay />
+              <Video title="Gameplay" src="https://www.youtube.com/embed/03ZMw7Y9qMo" />
               <img style={{position: "absolute",width: "8%",left: "70%",top: "255%"}} src={data.imageTokens[5]!== undefined ? data.imageTokens[0] : "/images/Assets/animal.png"} alt="Animal"/>
               <img style={{position: "absolute",width: "8%",left: "20%",top: "365%"}} src={data.imageTokens[6]!== undefined ? data.imageTokens[0] : "/images/Assets/animal.png"} alt="Animal"/>
               <RoadMap isAnimating={isAnimating} />
@@ -120,7 +119,7 @@ function App() {
               <img style={{position: "absolute",width: "9%",left: "15%",top: "70%"}} src={data.imageTokens[0]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake.png"} alt="Dragon"/>
               <img style={{position: "absolute",width: "9%",left: "80%"}} src={data.imageTokens[1]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake.png"} alt="Dragon"/>
               <img style={{position: "absolute",width: "15%",left: "50%",top: "130%"}} src={data.imageTokens[2]!== undefined ? data.imageTokens[0] : "/images/Assets/Drake2.png"} alt="Dragon"/>
-              <Video />
+              <Video title="Developers info" src="https://www.youtube.com/embed/dQw4w9WgXcQ"/>
               <Islands />
             </BackgroundContainer>
           </Background>

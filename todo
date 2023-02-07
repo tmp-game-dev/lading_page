@@ -1,17 +1,10 @@
 
-
-
-Personalizace -> Přihlášení penezenkou scan jeho NFT a zobrazení jeho postaviček na stránce místo zaákladních pokemonu.
-
-
-Video a Gameplay lze nahradit aby to bylo jen jedno.
-
-
-Nahradit fonty! (vybrat nějakej free co podporuje i čísla)
-Navbar -> Pořešit Obsahově
 Footer -> Pořešit Obsahově
 
-
-SMTP server na email a napojit na newsletter
+Napojit NewsLetter na https://github.com/tmp-game-dev/SMTP
+Ukládání emailu při posílání ze SMTP
 
 Nahradit přišerky za animace!
+Příhlášení přes více než jen metamask!
+Responsivita webu
+Zjistit jestli mam práva na font
